@@ -4,24 +4,14 @@ public class Vehicle {
 	public static final String BASIC = "BASIC";
 	public static final String GENERAL = "GENERAL";
 	public static final String LUXE = "LUXE";
-	
-	private String model;
 	private String marca;
+	private String model;
 	private String categoria;
 	
-	public Vehicle(String model, String marca, String categoria) {
-		super();
-		this.model = model;
+	public Vehicle(String marca, String model, String categoria) {
 		this.marca = marca;
-		this.categoria = categoria;
-	}
-
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
 		this.model = model;
+		this.categoria = categoria;
 	}
 
 	public String getMarca() {
@@ -32,6 +22,14 @@ public class Vehicle {
 		this.marca = marca;
 	}
 
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
 	public String getCategoria() {
 		return categoria;
 	}
@@ -39,18 +37,5 @@ public class Vehicle {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-
-	public static String getBasic() {
-		return BASIC;
-	}
-
-	public static String getGeneral() {
-		return GENERAL;
-	}
-
-	public static String getLuxe() {
-		return LUXE;
-	}
-	
 	
 }
