@@ -46,7 +46,7 @@ public class Client {
             getNom() +
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            double quantitat = quantitatPerLloguer(lloguer);
+            double quantitat = lloguer.quantitat();
 
             // afegeix lloguers freqüents
             bonificacions ++;
@@ -72,27 +72,5 @@ public class Client {
         return resultat;
         
     }
-
-	private double quantitatPerLloguer(Lloguer lloguer) {
-		double retorna_quantitat = 0;
-		switch (lloguer.getVehicle().getCategoria()) {
-        case Vehicle.BASIC:
-            retorna_quantitat += 3;
-            if (lloguer.getDies() > 3) {
-                retorna_quantitat += (lloguer.getDies() - 3) * 1.5;
-            }
-            break;
-        case Vehicle.GENERAL:
-            retorna_quantitat += 4;
-            if (lloguer.getDies() > 2) {
-                retorna_quantitat += (lloguer.getDies() - 2) * 2.5;
-            }
-            break;
-        case Vehicle.LUXE:
-            retorna_quantitat += lloguer.getDies() * 6;
-            break;
-    }
-		return retorna_quantitat;
-	}
 }
     

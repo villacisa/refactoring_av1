@@ -37,4 +37,26 @@ public class Lloguer {
 	public void setVehicles(Vehicle vehicle) {
 		this.vehicle = vehicle;
 	}
+	
+	public double quantitat() {
+		double retorna_quantitat = 0;
+		switch (getVehicle().getCategoria()) {
+        case Vehicle.BASIC:
+            retorna_quantitat += 3;
+            if (getDies() > 3) {
+                retorna_quantitat += (getDies() - 3) * 1.5;
+            }
+            break;
+        case Vehicle.GENERAL:
+            retorna_quantitat += 4;
+            if (getDies() > 2) {
+                retorna_quantitat += (getDies() - 2) * 2.5;
+            }
+            break;
+        case Vehicle.LUXE:
+            retorna_quantitat += getDies() * 6;
+            break;
+    }
+		return retorna_quantitat;
+	}
 }
