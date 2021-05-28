@@ -1,12 +1,13 @@
 package refactoring_av;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Lloguer {
 	private Date data;
 	private int dies;
 	private Vehicle vehicle;
-
+	
 	public Lloguer(Date data, int dies, Vehicle vehicle) {
 		this.data = data;
 		this.dies = dies;

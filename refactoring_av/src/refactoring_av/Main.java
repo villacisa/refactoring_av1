@@ -1,16 +1,14 @@
 package refactoring_av;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 public class Main {
 
 	public static void main(String[] args) throws ParseException {
-Vehicle vehicle = new Vehicle("Tata", "Vista", Vehicle.BASIC);
+		
+		Vehicle vehicle = new Vehicle("Tata", "Vista", Vehicle.BASIC);
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yyyy");
 

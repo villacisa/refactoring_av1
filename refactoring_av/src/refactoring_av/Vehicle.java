@@ -51,4 +51,6 @@ public class Vehicle {
 	public static String getLuxe() {
 		return LUXE;
 	}
+	
+	
 }
